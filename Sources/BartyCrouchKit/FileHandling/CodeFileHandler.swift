@@ -1,5 +1,6 @@
 import Foundation
 import SwiftSyntax
+import SwiftSyntaxParser
 
 final class CodeFileHandler {
     typealias TranslationElement = (langCode: String, translation: String)

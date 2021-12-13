@@ -16,7 +16,7 @@ let package = Package(
     .package(name: "Rainbow", url: "https://github.com/onevcat/Rainbow.git", from: "3.1.5"),
     .package(name: "SwiftCLI", url: "https://github.com/jakeheis/SwiftCLI.git", from: "6.0.3"),
     .package(name: "Toml", url: "https://github.com/jdfergason/swift-toml.git", .branch("master")),
-    .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", from: "0.50500.0"),
+    .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .branch("release/5.6")),
   ],
   targets: [
     .executableTarget(
@@ -32,6 +32,7 @@ let package = Package(
         "Rainbow",
         "SwiftCLI",
         "SwiftSyntax",
+        .product(name: "SwiftSyntaxParser", package: "SwiftSyntax"),
         "Toml",
       ]
     ),
